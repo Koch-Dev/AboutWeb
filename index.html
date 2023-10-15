@@ -14,7 +14,7 @@
         #navbar {
             position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
@@ -82,7 +82,7 @@
         <div class="mySlides">
             <img src="https://i.ibb.co/FXbx1Xw/photo-2023-10-15-21-21-09.jpg" alt="img1">
         </div>
-        <div class="mySlides">
+        <div class "mySlides">
             <img src="https://i.ibb.co/D7rQSPt/sins.jpg" alt="img2">
         </div>
         <div class="mySlides">
@@ -96,14 +96,21 @@
         <img src="https://example.com/blog-image.jpg" alt="Blog Image">
     </div>
 
+    <div id="article">
+        <h2>Python Developer Article</h2>
+        <p>I am a passionate Python developer with a love for programming and problem-solving. Python is a versatile language that I use to create applications, automate tasks, and work on various projects.</p>
+        <p>In my career, I've had the opportunity to work on a wide range of projects, from web development using Django and Flask to data analysis with libraries like NumPy and pandas. Python's simplicity and readability make it a joy to work with, and its extensive libraries provide solutions for almost any task.</p>
+        <p>My journey as a Python developer has been filled with learning, challenges, and achievements. I'm excited to continue my exploration of this incredible language and its applications.</p>
+    </div>
+
     <script>
         let slideIndex = 0;
         const slides = document.getElementsByClassName("mySlides");
 
         function showSlides() {
-            slides[slideIndex].style.display = "none";
+            slides[slideIndex].style display = "none";
             slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style.display = "block";
+            slides[slideIndex].style display = "block";
             setTimeout(showSlides, 3000);
         }
 
@@ -114,7 +121,7 @@
 
         blogLink.addEventListener("click", function(event) {
             event.preventDefault();
-            blogContent.style.display = "block";
+            blogContent.style display = "block";
         });
     </script>
 </body>
