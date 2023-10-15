@@ -5,25 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         #randi {
+            width: 100%;
+            height: 100vh;
             position: relative;
-            max-width: 500px;
-            margin: 0 auto;
+            overflow: hidden; /* Hide overflowing content */
         }
 
         .mySlides {
             display: none;
             width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: roll 8s linear infinite;
         }
 
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes roll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>LOWDA</h1>
-
     <div id="randi">
         <div class="mySlides">
             <img src="https://i.ibb.co/FXbx1Xw/photo-2023-10-15-21-21-09.jpg" alt="img1">
@@ -49,7 +67,7 @@
                 slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000);
+            setTimeout(showSlides, 8000); // Adjust the timing to match the animation duration
         }
 
         showSlides();
