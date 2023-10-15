@@ -8,7 +8,33 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Hide any potential scrolling bars */
+            overflow: hidden;
+        }
+
+        #navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            font-size: 18px;
+        }
+
+        #introduction {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 24px;
         }
 
         #randi {
@@ -30,9 +56,28 @@
             height: 100%;
             object-fit: cover;
         }
+
+        #blog-content {
+            display: none;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
+    <div id="navbar">
+        <a href="#">Home</a>
+        <a href="#" id="blog-link">Blog</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="introduction">
+        <p>I'm a Python developer. This is some information about me.</p>
+    </div>
+
     <div id="randi">
         <div class="mySlides">
             <img src="https://i.ibb.co/FXbx1Xw/photo-2023-10-15-21-21-09.jpg" alt="img1">
@@ -45,6 +90,12 @@
         </div>
     </div>
 
+    <div id="blog-content">
+        <h2>Blog Title</h2>
+        <p>Here is some blog content with images and text.</p>
+        <img src="https://example.com/blog-image.jpg" alt="Blog Image">
+    </div>
+
     <script>
         let slideIndex = 0;
         const slides = document.getElementsByClassName("mySlides");
@@ -53,10 +104,18 @@
             slides[slideIndex].style.display = "none";
             slideIndex = (slideIndex + 1) % slides.length;
             slides[slideIndex].style.display = "block";
-            setTimeout(showSlides, 3000); // Adjust the timing as needed
+            setTimeout(showSlides, 3000);
         }
 
         showSlides();
+
+        const blogLink = document.getElementById("blog-link");
+        const blogContent = document.getElementById("blog-content");
+
+        blogLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            blogContent.style.display = "block";
+        });
     </script>
 </body>
 </html>
