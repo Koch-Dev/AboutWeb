@@ -23,22 +23,12 @@
             width: 100%;
             height: 100%;
             position: absolute;
-            animation: roll 8s linear infinite;
         }
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        @keyframes roll {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
         }
     </style>
 </head>
@@ -57,18 +47,13 @@
 
     <script>
         let slideIndex = 0;
+        const slides = document.getElementsByClassName("mySlides");
 
         function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 8000); // Adjust the timing to match the animation duration
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].style.display = "block";
+            setTimeout(showSlides, 3000); // Adjust the timing as needed
         }
 
         showSlides();
