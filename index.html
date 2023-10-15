@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hye</title>
+    <title>Hey</title>
     <style>
         #randi {
-        position: relative;
-        max-width: 500px;
-        margin: 0 auto;
-     }
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-          .mySlides {
+        .mySlides {
             display: none;
             width: 100%;
-          }
-          img {
+        }
+
+        img {
             width: 100%;
-          }
-    </style> 
+        }
+    </style>
 </head>
 <body>
-    <h1> LOWDA</h1>
+    <h1>LOWDA</h1>
 
     <div id="randi">
         <div class="mySlides">
@@ -32,11 +33,11 @@
         </div>
         <div class="mySlides">
             <img src="https://i.ibb.co/D7rQSPt/sins.jpg" alt="img3">
-        </div>      
+        </div>
     </div>
 
     <script>
-        let slideIndex = 0
+        let slideIndex = 0;
 
         function showSlides() {
             let slides = document.getElementsByClassName("mySlides");
@@ -44,8 +45,8 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slide.length) {
-                slideIndex = 1:
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = "block";
             setTimeout(showSlides, 3000);
@@ -53,5 +54,5 @@
 
         showSlides();
     </script>
-    </body>
+</body>
 </html>
