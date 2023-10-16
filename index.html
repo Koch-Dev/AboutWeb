@@ -4,67 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #navbar {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        #navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 5px 10px;
-            margin: 5px;
-            font-size: 18px;
-        }
-
-        #introduction {
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 24px;
-        }
-
-        #randi {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mySlides {
-            display: none;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #blog-content {
-            display: none;
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            margin-top: 100px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div id="navbar">
@@ -73,56 +13,23 @@
         <a href="#">Skills</a>
         <a href="#">Contact</a>
     </div>
-
-    <div id="introduction">
-        <p>I'm a Python developer. This is some information about me.</p>
-    </div>
-
+    
     <div id="randi">
+        <p class="transparent-text">Hi Sexy Im Your sexa zoney</p>
+    </div>
+    
+    <div id="slideshow-container">
         <div class="mySlides">
             <img src="https://i.ibb.co/FXbx1Xw/photo-2023-10-15-21-21-09.jpg" alt="img1">
         </div>
-        <div class "mySlides">
+        <div class="mySlides">
             <img src="https://i.ibb.co/D7rQSPt/sins.jpg" alt="img2">
         </div>
         <div class="mySlides">
             <img src="https://i.ibb.co/D7rQSPt/sins.jpg" alt="img3">
         </div>
     </div>
-
-    <div id="blog-content">
-        <h2>Blog Title</h2>
-        <p>Here is some blog content with images and text.</p>
-        <img src="https://example.com/blog-image.jpg" alt="Blog Image">
-    </div>
-
-    <div id="article">
-        <h2>Python Developer Article</h2>
-        <p>I am a passionate Python developer with a love for programming and problem-solving. Python is a versatile language that I use to create applications, automate tasks, and work on various projects.</p>
-        <p>In my career, I've had the opportunity to work on a wide range of projects, from web development using Django and Flask to data analysis with libraries like NumPy and pandas. Python's simplicity and readability make it a joy to work with, and its extensive libraries provide solutions for almost any task.</p>
-        <p>My journey as a Python developer has been filled with learning, challenges, and achievements. I'm excited to continue my exploration of this incredible language and its applications.</p>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-        const slides = document.getElementsByClassName("mySlides");
-
-        function showSlides() {
-            slides[slideIndex].style display = "none";
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style display = "block";
-            setTimeout(showSlides, 3000);
-        }
-
-        showSlides();
-
-        const blogLink = document.getElementById("blog-link");
-        const blogContent = document.getElementById("blog-content");
-
-        blogLink.addEventListener("click", function(event) {
-            event.preventDefault();
-            blogContent.style display = "block";
-        });
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
