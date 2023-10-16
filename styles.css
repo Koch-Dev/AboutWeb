@@ -1,52 +1,121 @@
-/* styles.css */
-body {
+/* Reset some default margin and padding */
+body, div, h1, h2, p {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
 }
 
-#navbar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1;
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
 }
 
-#navbar a {
-    color: #000;
-    text-decoration: none;
-    margin: 10px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #2c3e50;
 }
 
-#navbar a:hover {
-    color: #ffcc00;
+nav {
+  position: relative;
+  width: 590px;
+  height: 50px;
+  background: #34495e;
+  border-radius: 8px;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
 }
 
-#randi {
-    text-align: center;
+nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
 }
 
-.transparent-text {
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    font-size: 18px;
+nav .animation {
+  position: absolute;
+  height: 100%;
+  /* height: 5px; */
+  top: 0;
+  /* bottom: 0; */
+  z-index: 0;
+  background: #1abc9c;
+  border-radius: 8px;
+  transition: all .5s ease 0s;
 }
 
+ul {
+  display: flex;
+}
+
+nav li:nth-child(1) {
+  width: 100px;
+}
+
+nav .start-home,
+li:nth-child(1):hover~.animation {
+  width: 100px;
+  left: 0;
+}
+
+nav li:nth-child(2) {
+  width: 110px;
+}
+
+nav li:nth-child(2):hover~.animation {
+  width: 110px;
+  left: 100px;
+}
+
+nav li:nth-child(3) {
+  width: 100px;
+}
+
+nav li:nth-child(3):hover~.animation {
+  width: 100px;
+  left: 210px;
+}
+
+nav li:nth-child(4) {
+  width: 160px;
+}
+
+nav li:nth-child(4):hover~.animation {
+  width: 160px;
+  left: 310px;
+}
+
+nav li:nth-child(5) {
+  width: 120px;
+}
+
+nav li:nth-child(5):hover~.animation {
+  width: 120px;
+  left: 470px;
+}
+/* Style the slideshow container */
 #slideshow-container {
     position: relative;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.mySlides {
-    display: none;
+/* Define a class for the images with a 16:9 aspect ratio */
+.img-16-9 {
+    width: 100%;
+    height: 0;
+    padding-bottom: 60.25%; /* (9 / 16) * 100% */
+}
+
+/* Apply the 16:9 aspect ratio to the images in the slideshow */
+.mySlides img {
     width: 100%;
 }
 
-img {
-    width: 100%;
-}
+/* Add more CSS as needed for your specific styling */
+
